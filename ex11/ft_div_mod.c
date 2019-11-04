@@ -4,14 +4,11 @@
 
 void	ft_div_mode(int a, int b, int *div, int *mod)
 {
-	int res;
-	int rest;
-
-	div = 0;
-	res = a / b;
-	rest = a % b;
-	*div = res;
-	*mod = &rest;
+	if (b != 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
 }
 
 int		main(int argc, char **argv)
@@ -19,6 +16,6 @@ int		main(int argc, char **argv)
 	int *mod;
 	int *res;
 
-	ft_div_mode(printf(%d, atoi(argv[1]))), printf(atoi(argv[2])), res, mod);
+	ft_div_mode(printf("res = %d\n mod = %d\n", atoi(argv[1]))), printf(atoi(argv[2]));
 	return (0);
 }
